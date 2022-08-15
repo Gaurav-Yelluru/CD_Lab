@@ -1,6 +1,5 @@
 %{
 #include"y.tab.h"
-extern char yyval;
 %}
 NUMBER [0-9]+
 LETTER [a-zA-Z]+
