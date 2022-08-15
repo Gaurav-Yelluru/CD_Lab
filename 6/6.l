@@ -1,14 +1,12 @@
 %{
 #include"y.tab.h"
-// extern char yylval;
+extern char yyval;
 %}
-ALPHA [A-Za-z]+
-DIGIT [0-9]+
+NUMBER [0-9]+
+LETTER [a-zA-Z]+
 %%
-{ALPHA} {yylval.sym=(char)yytext[0];
-          return NUMBER;}
-{DIGIT} {yylval.sym=(char)yytext[0];
-          return LETTER;}
-\n return 0;
-. return yytext[0];
+{NUMBER} {yylval.sym=(char)yytext[0]; return NUMBER;}
+{LETTER} {yylval.sym=(char)yytext[0];return LETTER;}
+\n {return 0;}
+. {return yytext[0];}
 %%
