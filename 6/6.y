@@ -72,8 +72,8 @@ void Quadruples(){
     while(cnt<ind){
         if(cnt==ind-1){
             printf("%c\t",code[cnt].op);
-            printf("%c\t",code[cnt].opd1);
             printf("%c\t\t",code[cnt].opd2);
+            printf("%c\t",code[cnt].opd1);
         }
         else{
             printf("%c\t",code[cnt].op);
